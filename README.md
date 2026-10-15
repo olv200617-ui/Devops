@@ -1,3 +1,3 @@
 # Introducción a Devops
 ---
-[DevOps](img/Devops.PNG)
+![DevOps](img/Devops.PNG)
