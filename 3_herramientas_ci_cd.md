@@ -1,0 +1,44 @@
+# 3. Herramientas de CI/CD
+
+[← Volver al Índice](index.md)
+
+---
+
+## Fundamentos de CI/CD
+
+* **CI (Continuous Integration / Integración Continua):** Práctica en la que los desarrolladores fusionan su código en el repositorio principal con frecuencia. Cada integración desencadena una compilación y pruebas automatizadas para detectar errores rápidamente.
+* **CD (Continuous Delivery / Continuous Deployment):**
+  * *Continuous Delivery:* Cada cambio validado está listo para desplegarse en producción con un clic (aprobación manual).
+  * *Continuous Deployment:* Cada cambio que supera las pruebas se despliega en producción de forma 100% automatizada.
+
+---
+
+## Principales Soluciones del Ecosistema
+
+### 1. GitHub Actions
+* **Descripción:** Plataforma de automatización integrada directamente en los repositorios de GitHub.
+* **Características:**
+  * Configuración basada en ficheros `.github/workflows/*.yml`.
+  * Amplio catálogo de acciones reutilizables en el *GitHub Marketplace*.
+  * Ejecutores alojados (*GitHub-hosted runners*) o autogestionados (*Self-hosted*).
+
+### 2. GitLab CI/CD
+* **Descripción:** Sistema integral de CI/CD incorporado de forma nativa en la plataforma GitLab.
+* **Características:**
+  * Declaración completa del ciclo mediante el archivo `.gitlab-ci.yml`.
+  * Soporte nativo para entornos de Kubernetes y registros de paquetes integrados.
+  * Gestión de secretos de infraestructura y entornos de revisión dinámica.
+
+### 3. Jenkins
+* **Descripción:** Servidor de automatización de código abierto y uno de los pioneros del sector.
+* **Características:**
+  * Basado en *Pipelines* declarativos o con *scripts* en lenguaje Groovy (`Jenkinsfile`).
+  * Ecosistema masivo con más de 1.800 plugins comunitarios.
+  * Excelente flexibilidad para infraestructuras locales y corporativas heredadas.
+
+### 4. Argo CD (Enfoque GitOps)
+* **Descripción:** Herramienta declarativa de entrega continua diseñada específicamente para Kubernetes.
+* **Características:**
+  * Utiliza repositorios Git como la **única fuente de verdad** del estado deseado de la aplicación.
+  * Sincronización y reconciliación automática: detecta desviaciones (*drift*) entre Git y el clúster.
+  * Interfaz web interactiva para visualizar recursos y estados de sincronización.
